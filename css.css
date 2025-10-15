@@ -1,0 +1,288 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 04 August 2025, 10:16:52
+    Author     : Moraka Morudu
+*/
+body{
+    
+    background-image: url('science-technology.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 0;
+}
+
+header{
+    text-align: center;
+    padding:40px 20px;
+    
+    
+    }
+    
+h1{
+    font-size: 35px;
+    border-bottom: 3px solid orangered;
+    display:inline-block;
+    padding-bottom: 10px;
+    color: orange;
+    text-align: center;
+    }
+    h2{
+    font-size: 20px;
+    display:inline-block;
+    padding-bottom: 10px;
+    color: orange;
+    text-align: center;
+    }
+    p{
+    font-size: 13px;
+    }
+
+.nav-menu {
+    list-style:none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display:flex;
+    justify-content: right;
+    gap: 30px;
+    }
+    
+    .nav-menu li a{
+        text-decoration: none;
+        color:black;
+        transition: color 0.3s;
+    }  
+    .nav-menu li a:hover {
+    color: #ffcc00;
+}
+ 
+    footer{
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: #f1f1f1;
+        color: #333;
+        padding:20px 10px;
+        text-align: center;
+        z-index: 1000;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+        margin-top: auto;
+        align-items:center;
+    }
+    
+ .affiliates {
+        display:flex;
+        justify-content: center;
+        gap:50px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+}
+
+.affiliate {
+        max-width: 200px;
+        text-align: center;
+}
+
+
+.affiliate img {
+       max-width: 100%;
+       height:auto;
+       margin-bottom: 10px;
+       border-radius: 4px;
+}
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    footer {
+      
+        flex-direction: column;
+    }
+    
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo img {
+    max-height: 60px;
+    width: auto;
+}
+.donate-button {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+    background-color: darkorange;
+}
+form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+button {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: darkorange;
+}
+.team-member {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.team-member img {
+    max-width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: orange;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: white;
+}
+.lab-image {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.lab-image img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.caption {
+    font-size: 14px;
+    color: #ddd;
+    margin-top: 8px;
+}
+.classroom-image {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.classroom-image img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.STEM-image {
+    text-align: left;
+    margin-top: 10px;
+}
+.STEM-image img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+section ul li::marker {
+    color: orange;
+}
+section ul {
+    padding-left: 20px;
+}
+.affiliate img {
+    max-height: 80px;
+    object-fit: contain;
+}
+section ul li strong {
+    color: orange;
+}
+.event-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.event-image {
+    flex: 1 1 45%;
+    max-width: 45%;
+    text-align: center;
+}
+
+.event-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.event-image .caption {
+    font-size: 14px;
+    color: #ddd;
+    margin-top: 8px;
+}
+
