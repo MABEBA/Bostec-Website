@@ -6,10 +6,6 @@ html, body {
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
     color: white;
-    background-image: url('science-technology.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     min-height: 100vh;
 }
 
