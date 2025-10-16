@@ -97,6 +97,7 @@ section {
 
 section h1, section h2, section h3 {
     margin-bottom: 10px;
+    text-align: left;
 }
 
 section p, section ul {
