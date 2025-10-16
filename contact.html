@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - BOSTEC</title>
     <link rel="stylesheet" href="css.css">
 </head>
@@ -14,6 +14,11 @@
             </a>
         </div>
         <nav>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -61,19 +66,29 @@
         </section>
     </main>
 
+
     <footer>
         <div class="affiliates">
             <div class="affiliate">
-                <img src="gov-logo.png" alt="South African Government Logo">
+                <img src="gov-logo.PNG" alt="South African Government Logo">
             </div>
             <div class="affiliate">
-                <img src="saasta-logo.jfif" alt="SAASTA Logo">
+                <img src="saasta-logo.JFIF" alt="SAASTA Logo">
             </div>
             <div class="affiliate">
-                    <img src="nsw.jfif" alt="National Science Week Logo">
+                <img src="nsw.jfif" alt="National Science Week Logo">
             </div>
         </div>
-        <p>&copy; 2025 Bokamoso Science and Technology Education Centre.All rights reserved.</p>
+        <p>&copy; 2025 Bokamoso Science and Technology Education Centre. All rights reserved.</p>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-active');
+        });
+    </script>
 </body>
 </html>
