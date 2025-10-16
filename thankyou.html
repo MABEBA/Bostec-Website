@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You - BOSTEC</title>
     <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -13,8 +15,9 @@
                 <img src="bostec-logo.png" alt="BOSTEC Logo">
             </a>
         </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
         <nav>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -42,6 +45,16 @@
                 <img src="nsw.jfif" alt="National Science Week Logo">
             </div>
         </div>
+        <p>&copy; 2025 Bokamoso Science and Technology Education Centre. All rights reserved.</p>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-active');
+        });
+    </script>
 </body>
 </html>
