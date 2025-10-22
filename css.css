@@ -361,3 +361,52 @@ footer a:hover {
         max-width: 100%;   /* fill container width on smaller screens */
     }
 }
+/* -----------------------------
+   HAMBURGER MENU FIX (VISIBLE ON ROYAL BLUE)
+------------------------------ */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.hamburger div {
+    width: 28px;
+    height: 3px;
+    background-color: white; /* ✅ white to show on royal blue */
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Show hamburger on mobile screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.98);
+        padding: 15px 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+
+    .nav-menu.mobile-active {
+        display: flex;
+    }
+
+    .nav-menu li a {
+        color: black;
+        font-size: 16px;
+    }
+}
+
