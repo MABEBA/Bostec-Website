@@ -362,28 +362,37 @@ footer a:hover {
     }
 }
 /* -----------------------------
-   HAMBURGER MENU FIX (BLACK ICON FOR WHITE HEADER)
+   HAMBURGER MENU FIX (TOP-RIGHT, BLACK ICON)
 ------------------------------ */
 .hamburger {
     display: none;
     flex-direction: column;
-    cursor: pointer;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
-    z-index: 1100;
+    position: absolute;
+    top: 20px;          /* position from top */
+    right: 20px;        /* move to top-right corner */
+    cursor: pointer;
+    z-index: 1200;
 }
 
 .hamburger div {
     width: 28px;
     height: 3px;
-    background-color: black; /* ✅ black for white header */
+    background-color: black; /* visible on white header */
     border-radius: 3px;
     transition: all 0.3s ease;
 }
 
-/* Mobile Navigation */
+/* Navigation Menu (Mobile View) */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+    }
+
+    nav {
+        position: relative;
     }
 
     .nav-menu {
@@ -404,9 +413,14 @@ footer a:hover {
         display: flex;
     }
 
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
     .nav-menu li a {
         color: black;
         font-size: 16px;
+        text-decoration: none;
     }
 }
 
