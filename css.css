@@ -362,7 +362,7 @@ footer a:hover {
     }
 }
 /* -----------------------------
-   HAMBURGER MENU FIX (VISIBLE ON ROYAL BLUE)
+   HAMBURGER MENU FIX (BLACK ICON FOR WHITE HEADER)
 ------------------------------ */
 .hamburger {
     display: none;
@@ -375,12 +375,12 @@ footer a:hover {
 .hamburger div {
     width: 28px;
     height: 3px;
-    background-color: white; /* ✅ white to show on royal blue */
+    background-color: black; /* ✅ black for white header */
     border-radius: 3px;
     transition: all 0.3s ease;
 }
 
-/* Show hamburger on mobile screens */
+/* Mobile Navigation */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
