@@ -48,6 +48,26 @@
         </div>
         <p>&copy; 2025 Bokamoso Science and Technology Education Centre. All rights reserved.</p>
     </footer>
+    <!-- World AIDS Day Popup -->
+<div id="aidsDayPopup" class="popup">
+    <div class="popup-content">
+        <img src="aids.png" alt="World AIDS Day Ribbon" class="popup-image">
+        <h2>World AIDS Day – 1 December</h2>
+        <p>
+            BOSTEC will be hosting a special World AIDS Day event on 
+            <strong>1 December</strong>. We invite all learners, educators, parents,
+            and community members to attend this important awareness programme.
+        </p>
+        <p>
+            Let us stand together to fight stigma, support those living with HIV,
+            and promote education and compassion within our community.
+            <strong>You are not alone — your life, your voice, and your future matter.</strong>
+        </p>
+
+        <button id="closePopup">Close</button>
+    </div>
+</div>
+
 
     <script>
         const hamburger = document.querySelector('.hamburger');
@@ -56,6 +76,21 @@
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('mobile-active');
         });
+        // World AIDS Day Popup (show every visit)
+window.addEventListener('load', () => {
+    const popup = document.getElementById('aidsDayPopup');
+    const closeBtn = document.getElementById('closePopup');
+
+    // Always show popup on page load
+    popup.style.display = 'flex';
+
+    // Close popup when button is clicked
+    closeBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+});
+
+
     </script>
 </body>
 </html>
