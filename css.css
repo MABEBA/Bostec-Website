@@ -10,6 +10,14 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    list-style-type: none;
+    overflow: visible;
+}
+
+ul,
+li {
+    font-family: inherit;
+    font-size: 15px;
 }
 
 body::before {
@@ -119,6 +127,7 @@ h1 {
 h2 {
     font-size: 24px;
     margin-top: 10px;
+
 }
 
 p {
@@ -129,19 +138,26 @@ p {
 
 ul {
     padding-left: 25px;
+    list-style-type: none;
     color: #ddd;
 }
 
-ul li::marker {
+ul li {
+    list-style-type: none;
+    margin-bottom: 12px;
+}
+/*
+  ul li::marker {
     color: orange;
 }
+*/
 
 /* -----------------------------
    BUTTONS & LINKS
 ------------------------------ */
 a.donate-button, button {
     display: inline-block;
-    background: orange;
+    background: #243B53;
     color: white;
     padding: 12px 24px;
     border: none;
@@ -152,90 +168,7 @@ a.donate-button, button {
 }
 
 a.donate-button:hover, button:hover {
-    background: darkorange;
-}
-
-/* -----------------------------
-   FORMS
------------------------------- */
-form {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 25px;
-    border-radius: 8px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 4px;
-    background: rgba(255,255,255,0.9);
-    color: #000;
-    font-size: 15px;
-}
-
-input:focus, textarea:focus {
-    outline: 2px solid orange;
-}
-
-/* -----------------------------
-   IMAGES & GALLERY
------------------------------- */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.team-member, .lab-image, .classroom-image, .STEM-image {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.team-member h3 {
-    margin-top: 10px;
-    color: orange;
-}
-
-.caption {
-    color: #ccc;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.event-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.event-image {
-    flex: 1 1 45%;
-    max-width: 45%;
-    text-align: center;
-}
-
-.lab-image img,
-.classroom-image img,
-.STEM-image img,
-.workshop img,
-.event-image img {
-    max-width: 50%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    display: block;
-    margin: 10px auto;
-}
-
-.event-image img {
-    max-width: 90%;
+    background: #4169e1;
 }
 
 /* -----------------------------
@@ -259,16 +192,13 @@ footer p {
     font-size: 14px;
     color: black;
 }
-
 footer a {
     color: orange;
     text-decoration: none;
 }
-
 footer a:hover {
     text-decoration: underline;
 }
-
 .affiliates {
     display: flex;
     justify-content: center;
@@ -276,26 +206,20 @@ footer a:hover {
     flex-wrap: wrap;
     margin-bottom: 10px;
 }
-
 .affiliate img {
     max-height: 50px;
     border-radius: 4px;
 }
-
-/* -----------------------------
-   RESPONSIVE DESIGN
------------------------------- */
+/* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
     main {
         padding: 25px 15px;
     }
 }
-
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
     }
-
     .nav-menu {
         display: none;
         flex-direction: column;
@@ -309,37 +233,29 @@ footer a:hover {
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         z-index: 1000;
     }
-
     .nav-menu.mobile-active {
         display: flex;
     }
-
     .nav-menu li a {
         color: black;
         font-size: 16px;
     }
-
     h1 {
         font-size: 30px;
     }
-
     h2 {
         font-size: 20px;
     }
-
     p {
         font-size: 15px;
     }
-
     .event-image {
         flex: 1 1 90%;
         max-width: 90%;
     }
-
     .affiliate img {
         max-width: 80px;
     }
-
     .lab-image img,
     .classroom-image img,
     .STEM-image img,
@@ -348,7 +264,6 @@ footer a:hover {
         max-width: 100%;
     }
 }
-
 @media (max-width: 480px) {
     header {
         flex-direction: row;
@@ -356,80 +271,708 @@ footer a:hover {
         align-items: center;
         padding: 15px 20px;
     }
-
     .logo img {
         max-height: 50px;
     }
-
     h1 {
         font-size: 26px;
     }
-
     main {
         padding: 20px 10px;
     }
 }
-/* World AIDS Day Banner */
-.aids-banner {
-    width: 100%;
-    background: #b30000;
-    color: white;
-    text-align: center;
-    padding: 12px 0;
-    font-size: 1.1rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-}
-/* World AIDS Day Popup */
-.popup {
+
+/* EVENT POPUP OVERLAY */
+.event-popup {
     position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.event-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+/* POPUP CARD */
+.event-popup-box {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 18px;
+    overflow: hidden;
+    /* box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);*/
+    padding-top: 45px;
+    /* transform: translateY(20px) scale(0.96);
+     transition: transform 0.3s ease;*/
+}
+.event-popup.show .event-popup-box {
+    transform: translateY(0) scale(1);
+}
+/* EVENT IMAGE pop up*/
+#event-popup-content > img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #ffffff;
+}
+/*POPUP CONTENT */
+.popup-event-content {
+    padding: 24px;
+    color: #000000;
+}
+.popup-event-content h2,
+.popup-event-content h3 {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 12px;
+}
+.popup-event-content p {
+    color: #222222;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+/*CLOSE BUTTON  for pop up event */
+.close-event-popup {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.2s ease;
+}
+.close-event-popup:hover {
+    background: royalblue;
+    transform: rotate(90deg);
+}
+/* LEARN MORE BUTTON for pop event */
+.event-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 20px auto 5px;
+    padding: 11px 28px;
+    background: royalblue;
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid royalblue;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    box-shadow: 0 5px 15px rgba(65, 105, 225, 0.25);
+    transition: all 0.3s ease;
+}
+.event-button:hover {
+    background: #ffffff;
+    color: royalblue;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(65, 105, 225, 0.35);
+}
+/*MOBILE RESPONSIVENESS  for pop event*/
+@media (max-width: 600px) {
+    .event-popup-box {
+        max-width: 95%;
+        border-radius: 14px;
+    }
+    #event-popup-content > img {
+        max-height: 240px;
+    }
+    .popup-event-content {
+        padding: 18px;
+    }
+    .popup-event-content h2,
+    .popup-event-content h3 {
+        font-size: 20px;
+    }
+    .popup-event-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .event-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .close-event-popup {
+        width: 26px;
+        height: 26px;
+        font-size: 15px;
+        line-height: 26px;
+    }
+}
+/*  SERVICES INTRODUCTION start is the style for service page */
+.services-intro {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    text-align: center;
+}
+.services-intro h1 {
+    margin-bottom: 15px;
+}
+.services-intro p {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+/* ======== SERVICES GRID================================== */
+.services-grid {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+/* ======== SERVICE CARDS================================== */
+.service-card {
+    position: relative;
+    background: #ffffff;
+    color: #222222;
+    padding: 25px;
+    border-radius: 18px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(65, 105, 225, 0.08);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: auto;
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+}
+
+
+/* Small blue science accent */
+.service-card::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.65);
-    display: none; /* Hidden by default */
-    justify-content: center;
+    height: 5px;
+    /*  background: royalblue;*/
+}
+.service-card:hover {
+    /* transform: translateY(-5px);*/
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.18);
+}
+/* ==SERVICE HEADINGS=========== */
+.service-card h2 {
+    display: flex;
     align-items: center;
-    z-index: 9999;
+    gap: 12px;
+    color: #243B53;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.3;
 }
+/* ========SCIENCE ICON BADGES===================== */
+.service-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: #243B53;
+    border-radius: 50%;
+    font-size: 25px;
+    box-shadow:
+        0 5px 14px rgba(65, 105, 225, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    /*   transition: transform 0.3s ease,box-shadow 0.3s ease;*/
+}
+.service-card:hover .service-icon {
+    /*  transform: rotate(-5deg) scale(1.08);*/
+    box-shadow:
+        0 8px 20px rgba(65, 105, 225, 0.4);
+}
+/*   SERVICE TEXT==*/
+.service-card p {
+    color: #243B53;
+    line-height: 1.65;
+    margin-top: 0;
+}
+/* ========== SERVICE LISTS============================== */
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 20px;
+    text-align: left;
+}
+.service-card ul li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    line-height: 1.55;
+    color: #243B53;
+    text-align: left;
+}
+/* Remove old list markers */
+.service-card ul li::marker {
+    content: "";
+}
+/* ==SCIENCE STYLE LIST ICON ==================== */
 
-.popup-content p {
-    background: white;
-    color: black;
-    padding: 25px;
-    width: 90%;
-    max-width: 430px;
+.service-card ul li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 21px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #243B53;
+    color: white;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: bold;
+}
+.service-card ul li:hover::before {
+    transform: scale(1.15);
+}
+/* === IMAGES=== */
+.service-image {
+    margin-top: 15px;
+    padding-top: 0;
+}
+.service-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
     border-radius: 12px;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12);
+    transition:
+        transform 0.3s ease;
+}
+
+
+.service-card:hover .service-image img {
+    transform: scale(1.015);
+}
+
+
+/* =====================================================
+   IMAGE CAPTIONS
+===================================================== */
+
+.service-image .caption {
+    margin: 10px 0 0;
+
+    padding: 0 5px;
+
     text-align: center;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-    font-family: 'Roboto', sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    color: #666666;
 }
 
-.popup-content h2 {
-    color: #b30000;
-    margin-top: 10px;
+
+/* =====================================================
+   EVENTS GALLERY
+===================================================== */
+
+.event-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-top: 12px;
 }
 
-.popup-image {
-    width: 90px;
-    height: auto;
+
+.event-image {
+    background: #f5f7fb;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    border: 1px solid #e5e8ef;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.event-image img {
+    width: 100%;
+
+    height: 130px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+}
+
+
+.event-image .caption {
+    color: #444444;
+
+    padding: 8px;
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    line-height: 1.35;
+}
+
+
+/* =====================================================
+   COMPACT EVENTS CARD
+===================================================== */
+
+.events-card {
+    padding: 22px;
+
+}
+
+
+.events-card h2 {
+    margin-bottom: 14px;
+}
+
+
+.events-card p {
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+}
+
+
+.events-card ul {
     margin-bottom: 10px;
 }
 
-.popup-content button {
-    margin-top: 15px;
-    padding: 10px 20px;
+
+.events-card ul li {
+    margin-bottom: 7px;
+
+    padding-left: 27px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+.events-card ul li::before {
+    width: 19px;
+    height: 19px;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   EVENTS ICON
+===================================================== */
+
+.events-card .service-icon {
+    font-size: 23px;
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+
+        width: 92%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .services-intro {
+        width: 92%;
+    }
+
+
+    .service-card {
+        padding: 20px;
+    }
+
+
+    .service-card h2 {
+        font-size: 20px;
+        text-align: center;
+        gap: 10px;
+    }
+
+
+    .service-icon {
+        width: 44px;
+        height: 44px;
+
+        min-width: 44px;
+
+        font-size: 21px;
+    }
+
+
+    .service-image img {
+        height: auto;
+    }
+
+
+    .event-gallery {
+        grid-template-columns: 1fr;
+    }
+
+
+    .event-image img {
+        height: auto;
+    }
+
+}
+/*
+   for contact.html styles
+*/
+
+/* =========================================
+   CONTACT PAGE TWO-COLUMN LAYOUT
+========================================= */
+.contact-info-card,
+.contact-info-card h2,
+.contact-info-card p,
+.contact-info-card span,
+.contact-info-card a {
+    color: #243B53;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+    align-items: stretch;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION CARD - LEFT
+========================================= */
+.contact-info-card,
+.contact-info-card h2,
+.contact-info-card p,
+.contact-info-card span,
+.contact-info-card a {
+    color: #243B53;
+}
+
+.contact-info-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    color: #243B53;
+}
+
+.contact-info-card > h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #243B53;
+}
+
+.contact-info-grid h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #243B53;
+}
+
+.contact-info-card h2,
+.contact-info-card p,
+.contact-info-card a,
+.contact-info-card i {
+    color: #243B53 !important;
+}
+
+.contact-info-grid h2 i {
+    font-size: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.contact-info-grid section:first-child {
+    border-bottom: 1px solid #222222;
+    padding-bottom: 25px;
+}
+
+.contact-info-grid p {
+    text-align: center;
+    color: #243B53;
+}
+
+.contact-info-grid section:first-child {
+    border-bottom: 1px solid #222222;
+    padding-bottom: 25px;
+}
+
+.contact-info-grid a {
+    color: #243B53;
+}
+
+/* =========================================
+   MESSAGE FORM CARD - RIGHT
+========================================= */
+
+.message-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    color: #243B53;
+}
+
+.message-card h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+form {
+    width: 100%;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #243B53;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
     border: none;
-    background: #b30000;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
+    border-radius: 5px;
+    font-family: inherit;
     font-size: 15px;
+    border: 1px solid #243B53;
+    color: #243B53;
 }
 
-.popup-content button:hover {
-    background: #8a0000;
-
+form textarea {
+    resize: vertical;
 }
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid lightgray;
+}
+
+form button {
+    display: block;
+    margin: 10px auto 0;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #243B53;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #4169e1;
+}
+
+/* =========================================
+   VIEW MORE SERVICES
+========================================= */
+
+.services-grid .service-card:nth-child(n+5) {
+    display: none;
+}
+
+.view-more-container {
+    width: 100%;
+    text-align: center;
+    margin: 30px auto 50px;
+}
+
+.view-more-btn {
+    background: royalblue;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background: #243B53;
+    transform: translateY(-2px);
+}
+
+
