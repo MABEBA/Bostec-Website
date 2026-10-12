@@ -1,190 +1,313 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - BOSTEC</title>
-    <link rel="stylesheet" href="css.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="bostec-logo.png" alt="BOSTEC Logo">
-            </a>
-        </div>
-        <nav>
-            <div class="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <title>About Us</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="css.css">
+        <style>
+            .our-team {
+                position: relative;
+                background: royalblue;
+                color: white;
+                padding: 25px;
+                border-radius: 18px;
+                box-sizing: border-box;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+                border: 1px solid rgba(65, 105, 225, 0.08);
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                overflow: hidden;
+                height: auto;
+
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .our-team:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+            }
+
+            /* Heading */
+            .our-team h2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0;
+                color: orange;
+                margin: 0 0 15px;
+                line-height: 1.3;
+                width: 100%;
+                text-align: center;
+            }
+
+            /* Paragraph */
+            .our-team p {
+                color: white;
+                line-height: 1.65;
+                margin: 0 auto 20px;
+                max-width: 800px;
+                text-align: center;
+            }
+
+            /* Team member section */
+            .our-team .team-member {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+            }
+
+            /* Team member image */
+            .our-team .team-member img {
+                width: 420px;
+                height: 260px;
+                object-fit: contain;
+                object-position: center;
+                display: block;
+                margin: 10px auto 15px;
+                border-radius: 10px;
+            }
+
+            /* Team member name */
+            .our-team .team-member h3 {
+                margin: 5px 0 8px;
+                color: white;
+                text-align: center;
+            }
+
+            /* Job title */
+            .our-team .team-member p {
+                margin: 0;
+                color: white;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!--HEADER-->
+        <header>
+
+            <div class="logo">
+
+                <a href="index.html">
+
+                    <img
+                        src="bostec-logo.png"
+                        alt="BOSTEC Logo"
+                        >
+
+                </a>
+
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="service.html">Our Services</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h1>About Bokamoso Science and Technology Education Centre</h1>
-            <p>
-                Bokamoso Science and Technology Education Centre (BOSTEC) is a forward-thinking initiative dedicated to empowering learners through high-quality science and technology education.
-                BOSTEC is the flagship science centre based in Blouberg Municipality under Capricorn District Of Limpopo.The centre was established on the 1st March 1995.
-                Our mission is to bridge the digital divide and cultivate a generation of innovators, problem-solvers, and critical thinkers.
- 
-            </p>
-        </section>
-
-        <section>
-            <h2>Our Vision</h2>
-            <p style="text-align: center;">
-                To bridge the Science and Technology gaps in our communities.
-            </p>
-        </section>
-
-        <section>
-    <h2>Our Values</h2>
-    <ul>
-        <li>🔬 Excellence in STEM education — We strive to raise the standard of teaching and learning in mathematics, science, and technology.</li>
-        <li>🌍 Community empowerment — We extend science services to surrounding communities through outreach and engagement.</li>
-        <li>📚 Lifelong learning — We promote continuous growth through career education and exposure to evolving technologies.</li>
-        <li>🤝 Collaboration and inclusivity — We expand access to science and technology education for disadvantaged learners and educators.</li>
-        <li>🧠 Structured Thinking — Like a linked list, we build knowledge step-by-step, connecting concepts with clarity and purpose.</li>
-        <li>🔗 Connectivity — Every learner is a vital node in the chain of progress. We foster meaningful connections between ideas, people, and opportunities.</li>
-        <li>🛠 Practical Application — We ensure every lesson carries real-world relevance, preparing learners for future careers and challenges.</li>
-        <li>🚀 Forward Progress — Our programs are designed to move learners forward, one milestone at a time.</li>
-        <li>📢 Public Engagement — We actively promote awareness and participation in science, engineering, and technology across all sectors of society.</li>
-    </ul>
-</section>
-
-    <section>
-          <h2>What We’ve Achieved</h2>
-            <p>
-              Over the past decade, Bokamoso Science and Technology Education Centre (BOSTEC) has made a profound impact on learners, educators, and communities across South Africa. Our commitment to science and technology education is reflected in the milestones we've reached:
-            </p>
-      <ul>
-        <li>📚 Hosted <strong>170,000 learners</strong> through enrichment programmes</li>
-        <li>🌍 Reached <strong>230,000 learners</strong> through outreach programmes</li>
-        <li>🎉 Organized <strong>456 educational events</strong> across the country</li>
-     </ul>
-
-          <h3>Prominent Delegates We've Welcomed</h3>
-    <p>
-        Since our inception, BOSTEC has had the honor of hosting distinguished leaders and advocates for education and technology, including:
-    </p>
-    <ul>
-        <li>🎓 Former Education MEC Mr. Mushwana</li>
-        <li>🎓 Former Education MEC Mrs. Mashamba</li>
-        <li>🔬 Former Minister of Science and Technology Dr. Musibudi Mangena</li>
-        <li>🎓 Former Education MEC Mr. Kgetsepe</li>
-        <li>🔬 Former Deputy Minister of Science and Technology Mr. Masuhla</li>
-        <li>🏛️ Former Local Mayors Refilwe Kubwana and Seriti Sekgolwana</li>
-        <li>👥 Former National Chairperson of NYDA Mr. Sfiso</li>
-    </ul>
-</section>
-<section>
-    <h2>What’s Next</h2>
-    <p>
-        As we look ahead, Bokamoso Science and Technology Education Centre remains committed to growth, innovation, and impact. Our next chapter is guided by bold goals and strategic focus:
-    </p>
-    <ul>
-        <li>🛡️ <strong>Improving Occupational Health and Safety Awareness</strong> — Ensuring safe learning environments for all participants and staff.</li>
-        <li>🎯 <strong>Enhancing Our Corporate Identity</strong> — Strengthening visibility through directional signage, a dedicated website, Google Maps presence, banners, and public posters.</li>
-        <li>🌱 <strong>Advancing Sustainability</strong> — Aligning with our 5-year sustainability plan to promote responsible practices and long-term resilience.</li>
-        <li>📈 <strong>Staying True to Our Strategic Objectives</strong> — Upholding our mission and values while adapting to evolving educational needs.</li>
-        <li>🔬 <strong>Expanding Science Education</strong> — Reaching more learners, more communities, and more minds with the power of science and technology.</li>
-    </ul>
-</section>
-        <section>
-    <h2>Our Partners</h2>
-    <p>
-        At Bokamoso Science and Technology Education Centre (BOSTEC), collaboration is key to our impact. We are proud to work alongside visionary organizations that share our commitment to education, empowerment, and innovation.
-    </p>
-    <ul>
-        <li>🔬 <strong>SAASTA (South African Agency for Science and Technology Advancement)</strong> — Supporting science outreach and public engagement.</li>
-        <li>🏫 <strong>Department of Education</strong> — Partnering to enhance curriculum delivery and educator development.</li>
-        <li>🏘️ <strong>Local Schools</strong> — Collaborating to reach learners directly through enrichment and career guidance programmes.</li>
-        <li>👶 <strong>Nelson Mandela Children’s Fund</strong> — Empowering youth through holistic development and educational support.</li>
-    </ul>
-    <p>
-        These partnerships strengthen our mission and expand our reach, helping us build a future where every learner has the tools to thrive.
-    </p>
-</section>
-
- <section>
-    <h2>Challenges We Face</h2>
-    <p>
-        While BOSTEC continues to make strides in science and technology education, we recognize the hurdles that come with our mission — especially in underserved and rural communities. These challenges shape our strategy and fuel our determination:
-    </p>
-    <ul>
-        <li>🏞️ <strong>Rural Location</strong> — Operating in a rural setting presents logistical and infrastructural limitations that affect access and delivery.</li>
-        <li>💰 <strong>Long-Term Funding</strong> — Sustaining our programs and expanding our reach requires consistent financial support and strategic partnerships.</li>
-        <li>🦠 <strong>Post-COVID Recovery</strong> — The pandemic disrupted learning and community engagement, and its after-effects continue to impact participation and planning.</li>
-        <li>📶 <strong>Network Coverage</strong> — Limited internet access in some areas hinders digital learning and communication.</li>
-        <li>📆 <strong>High Competition for Weekend & Recess Programmes</strong> — Balancing demand and availability for enrichment sessions remains a challenge, especially during peak periods.</li>
-    </ul>
-</section>
-<section>
-    <h2>Support Our Mission</h2>
-    <p>
-        At Bokamoso Science and Technology Education Centre (BOSTEC), we believe that every learner deserves access to quality science and technology education — regardless of location or background. But we can't do it alone.
-    </p>
-    <p>
-        Your support helps us:
-    </p>
-    <ul>
-        <li>📚 Reach more learners through enrichment and outreach programmes</li>
-        <li>🏗️ Improve infrastructure and digital access in rural communities</li>
-        <li>🌱 Advance our 5-year sustainability plan</li>
-        <li>🧪 Deliver hands-on science education and career guidance</li>
-        <li>📢 Strengthen our public presence and educational impact</li>
-    </ul>
-    <p>
-        Whether you're a corporate sponsor, individual donor, or community ally — your contribution fuels transformation. Join us in shaping the next generation of scientists, engineers, and innovators.
-    </p>
-    <a href="contact.html" class="donate-button">Become a Donor</a>
-</section>
-
-        <section>
-            <h2>Our Team</h2>
-            <p>
-                Led by passionate educators and technologists, our team combines academic expertise with real-world experience. We believe in hands-on learning, mentorship, and creating opportunities for every learner to thrive.
-            </p>
-            <div class="team-member">
-                <img src="murudu.png" alt="Murudu MS - Managing Director">
-                 <h3>Murudu MS</h3>
-             <p style="text-align: center;">Managing Director</p>
-    </div>
-        </section>
-    </main>
 
 
-    <footer>
-        <div class="affiliates">
-            <div class="affiliate">
-                <img src="gov-logo.png" alt="SA Gov logo">
+            <nav>
+
+                <div class="hamburger">
+
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                </div>
+
+
+                <ul class="nav-menu">
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="service.html">Services</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </header>
+        <!--  MAIN CONTENT-->
+        <main>
+            <!--  INTRODUCTION -->
+            <section class="services-intro">
+                <h1>About Bokamoso Science and Technology Education Centre</h1>
+                <p>
+                    Bokamoso Science and Technology Education Centre (BOSTEC) is a forward-thinking initiative dedicated to empowering learners through high-quality science and technology education.
+                    BOSTEC is the flagship science centre based in Blouberg Municipality under Capricorn District Of Limpopo.The centre was established on the 1st March 1995.
+                    Our mission is to bridge the digital divide and cultivate a generation of innovators, problem-solvers, and critical thinkers.
+                </p>          
+                <h2> Our Vission </h2>
+                <p >To bridge the Science and Technology gaps in our communities.</p>
+
+            </section>
+            <!--SERVICES GRID-->
+            <div class="services-grid">
+                <!--Our Values-->
+                <section class="service-card">
+
+                    <h2><span class="service-icon"><i class="fa-solid fa-heart"></i></span> Our Values</h2>   
+                    <ul>
+                        <li><b>Excellence in STEM education</b> — We strive to raise the standard of teaching and learning in mathematics, science, and technology.</li>
+                        <li><b>Community empowerment</b> — We extend science services to surrounding communities through outreach and engagement.</li>
+                        <li><b>Lifelong learning</b> — We promote continuous growth through career education and exposure to evolving technologies.</li>
+                        <li><b>Collaboration and inclusivity </b>— We expand access to science and technology education for disadvantaged learners and educators.</li>
+                        <li><b>Structured Thinking</b> — Like a linked list, we build knowledge step-by-step, connecting concepts with clarity and purpose.</li>
+                        <li><b>Connectivity</b> — Every learner is a vital node in the chain of progress. We foster meaningful connections between ideas, people, and opportunities.</li>
+                        <li><b>Practical Application</b> — We ensure every lesson carries real-world relevance, preparing learners for future careers and challenges.</li>
+                        <li><b>Forward Progress</b>Forward Progress — Our programs are designed to move learners forward, one milestone at a time.</li>
+                        <li><b>Public Engagement</b> — We actively promote awareness and participation in science, engineering, and technology across all sectors of society.</li>
+                    </ul>
+                </section>
+                <!-- What We’ve Achieved -->
+                <section class="service-card">
+                    <h2><span class="service-icon"><i class="fa-solid fa-trophy"></i></span> What We’ve Achieved</h2>                    <p>
+                        Over the past decade, Bokamoso Science and Technology Education Centre (BOSTEC) has made a profound impact on learners, educators, and communities across South Africa. Our commitment to science and technology education is reflected in the milestones we've reached:
+                    </p>
+                    <ul>
+                        <li>Hosted <strong>170,000 learners</strong> through enrichment programmes</li>
+                        <li>Reached <strong>230,000 learners</strong> through outreach programmes</li>
+                        <li>Organized <strong>456 educational events</strong> across the country</li>
+                    </ul>
+
+                    <h3> Prominent Delegates We've Welcomed</h3>
+                    <p>
+                        Since our inception, BOSTEC has had the honor of hosting distinguished leaders and advocates for education and technology, including:
+                    </p>
+                    <ul>
+                        <li>Former Education MEC Mr. Mushwana</li>
+                        <li>Former Education MEC Mrs. Mashamba</li>
+                        <li>Former Minister of Science and Technology Dr. Musibudi Mangena</li>
+                        <li>Former Education MEC Mr. Kgetsepe</li>
+                        <li>Former Deputy Minister of Science and Technology Mr. Masuhla</li>
+                        <li>Former Local Mayors Refilwe Kubwana and Seriti Sekgolwana</li>
+                        <li>Former National Chairperson of NYDA Mr. Sfiso</li>
+                    </ul>
+                </section>
+
+                <section class="service-card">
+                    <h2><span class="service-icon"><i class="fa-solid fa-rocket"></i></span> What’s Next</h2>         
+                    <p>
+                        As we look ahead, Bokamoso Science and Technology Education Centre remains committed to growth, innovation, and impact. Our next chapter is guided by bold goals and strategic focus:
+                    </p>
+                    <ul>
+                        <li> <strong>Improving Occupational Health and Safety Awareness</strong> — Ensuring safe learning environments for all participants and staff.</li>
+                        <li><strong>Enhancing Our Corporate Identity</strong> — Strengthening visibility through directional signage, a dedicated website, Google Maps presence, banners, and public posters.</li>
+                        <li><strong>Advancing Sustainability</strong> — Aligning with our 5-year sustainability plan to promote responsible practices and long-term resilience.</li>
+                        <li><strong>Staying True to Our Strategic Objectives</strong> — Upholding our mission and values while adapting to evolving educational needs.</li>
+                        <li><strong>Expanding Science Education</strong> — Reaching more learners, more communities, and more minds with the power of science and technology.</li>
+                    </ul>
+                </section>
+                <!--  EVENTS & COMMUNITY -->
+                <section class="service-card events-card">
+
+                    <h2><span class="service-icon"><i class="fa-solid fa-handshake"></i></span> Our Partners</h2>                    <p>
+                        At Bokamoso Science and Technology Education Centre (BOSTEC), collaboration is key to our impact. We are proud to work alongside visionary organizations that share our commitment to education, empowerment, and innovation.
+                    </p>
+                    <ul>
+                        <li><strong>SAASTA (South African Agency for Science and Technology Advancement)</strong> — Supporting science outreach and public engagement.</li>
+                        <li><strong>Department of Education</strong> — Partnering to enhance curriculum delivery and educator development.</li>
+                        <li> <strong>Local Schools</strong> — Collaborating to reach learners directly through enrichment and career guidance programmes.</li>
+                        <li><strong>Nelson Mandela Children’s Fund</strong> — Empowering youth through holistic development and educational support.</li>
+                    </ul>
+                    <p>
+                        These partnerships strengthen our mission and expand our reach, helping us build a future where every learner has the tools to thrive.
+                    </p>
+                </section>
+                <section class="service-card events-card">
+                    <h2><span class="service-icon"><i class="fa-solid fa-triangle-exclamation"></i></span> Challenges We Face</h2>
+                    <p>
+                        While BOSTEC continues to make strides in science and technology education, we recognize the hurdles that come with our mission — especially in underserved and rural communities. These challenges shape our strategy and fuel our determination:
+                    </p>
+                    <ul>
+                        <li><strong>Rural Location</strong> — Operating in a rural setting presents logistical and infrastructural limitations that affect access and delivery.</li>
+                        <li><strong>Long-Term Funding</strong> — Sustaining our programs and expanding our reach requires consistent financial support and strategic partnerships.</li>
+                        <li><strong>Post-COVID Recovery</strong> — The pandemic disrupted learning and community engagement, and its after-effects continue to impact participation and planning.</li>
+                        <li><strong>Network Coverage</strong> — Limited internet access in some areas hinders digital learning and communication.</li>
+                        <li><strong>High Competition for Weekend & Recess Programmes</strong> — Balancing demand and availability for enrichment sessions remains a challenge, especially during peak periods.</li>
+                    </ul>
+
+                </section>
+                <section class="service-card events-card">   
+                    <h2><span class="service-icon"><i class="fa-solid fa-hand-holding-heart"></i></span> Support Our Mission</h2>                    <p>
+                        At Bokamoso Science and Technology Education Centre (BOSTEC), we believe that every learner deserves access to quality science and technology education — regardless of location or background. But we can't do it alone.
+                    </p>
+                    <p>Your support helps us:</p>
+                    <ul>
+                        <li>Reach more learners through enrichment and outreach programmes</li>
+                        <li>Improve infrastructure and digital access in rural communities</li>
+                        <li>Advance our 5-year sustainability plan</li>
+                        <li>Deliver hands-on science education and career guidance</li>
+                        <li>Strengthen our public presence and educational impact</li>
+                    </ul>
+                    <p>
+                        Whether you're a corporate sponsor, individual donor, or community ally — your contribution fuels transformation. Join us in shaping the next generation of scientists, engineers, and innovators.
+                    </p>
+                    <a href="contact.html" class="donate-button">Become a Donor</a>
+
+                </section>
+
             </div>
-            <div class="affiliate">
-                <img src="saasta-logo.jfif" alt="SAASTA Logo">
-            </div>
-            <div class="affiliate">
-                <img src="nsw.jfif" alt="National Science Week Logo">
-            </div>
-        </div>
-        <p>&copy; 2025 Bokamoso Science and Technology Education Centre. All rights reserved.</p>
-    </footer>
+            <div class="our-team">
+                <h2>Our Team</h2>
+                <p>
+                    Led by passionate educators and technologists, our team combines
+                    academic expertise with real-world experience. We believe in
+                    hands-on learning, mentorship, and creating opportunities for
+                    every learner to thrive.
+                </p>
 
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
+                <div class="team-member">
 
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('mobile-active');
-        });
-    </script>
-</body>
+                    <img src="murudu.png" alt="Murudu MS - Managing Director">
+
+                    <h3>Murudu MS</h3>
+
+                    <p>Managing Director</p>
+
+                </div>
+
+            </div>
+        </main>
+        <!--  FOOTER -->
+        <footer>
+            <div class="affiliates">
+                <div class="affiliate">
+                    <img src="gov-logo.png"  alt="South African Government Logo" >
+                </div>
+                <div class="affiliate">
+                    <img src="saasta-logo.jfif" alt="SAASTA Logo" >
+                </div>
+                <div class="affiliate">
+                    <img src="nsw.jfif"  alt="National Science Week Logo" >
+                </div>
+            </div>
+            <p> &copy; 2025 Bokamoso Science and Technology Education Centre. All rights reserved.</p>
+        </footer>
+        <<script src="script.js"></script>
+    </body>
+
 </html>
