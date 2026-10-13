@@ -30,12 +30,12 @@
                 overflow: hidden;
                 height: auto;
 
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                /*  transition: transform 0.3s ease, box-shadow 0.3s ease;*/
             }
 
             .our-team:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+                /* transform: translateY(-5px);
+                 box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);*/
             }
 
             /* Heading */
@@ -94,6 +94,75 @@
                 color: white;
                 text-align: center;
             }
+
+            /* Become a Donor Section */
+
+            /* Become a Donor Section */
+            .donate-section {
+                width: 90%;
+                max-width: 1000px;
+                margin: 30px auto 40px;
+                padding: 15px 0;
+                box-sizing: border-box;
+                text-align: center;
+                background: transparent;
+                box-shadow: none;
+                border: none;
+                border-radius: 0;
+            }
+
+            /* Donation message */
+            .donate-section p {
+                color: #243B53;
+                font-size: 16px;
+                line-height: 1.6;
+                text-align: center;
+                margin: 0 0 20px;
+            }
+
+            /* Center the button */
+            .donate-section .donate-button-container {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+            /* Donate button */
+            .donate-section a.donate-button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 13px 28px;
+                background-color: #243B53;
+                color: #ffffff;
+                border: none;
+                border-radius: 6px;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: bold;
+                margin: 0;
+                transition: background-color 0.2s ease;
+            }
+
+            .donate-section a.donate-button:hover {
+                background-color: royalblue;
+                color: #ffffff;
+            }
+
+            /* Mobile responsiveness */
+            @media (max-width: 600px) {
+                .donate-section {
+                    width: 92%;
+                    padding: 10px 0;
+                }
+
+                .donate-section a.donate-button {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+
 
         </style>
     </head>
@@ -251,7 +320,7 @@
                     </ul>
 
                 </section>
-                <section class="service-card events-card">   
+                <section class="service-card events-card support-card">   
                     <h2><span class="service-icon"><i class="fa-solid fa-hand-holding-heart"></i></span> Support Our Mission</h2>                    <p>
                         At Bokamoso Science and Technology Education Centre (BOSTEC), we believe that every learner deserves access to quality science and technology education — regardless of location or background. But we can't do it alone.
                     </p>
@@ -266,8 +335,6 @@
                     <p>
                         Whether you're a corporate sponsor, individual donor, or community ally — your contribution fuels transformation. Join us in shaping the next generation of scientists, engineers, and innovators.
                     </p>
-                    <a href="contact.html" class="donate-button">Become a Donor</a>
-
                 </section>
 
             </div>
@@ -291,6 +358,17 @@
                 </div>
 
             </div>
+
+            <!-- Become a Donor Section -->
+            <div class="donate-section">
+                <div class="donate-button-container">
+                    <a href="contact.html" class="donate-button">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                        Become a Donor
+                    </a>
+                </div>
+            </div>
+
         </main>
         <!--  FOOTER -->
         <footer>
