@@ -153,23 +153,7 @@ ul li {
 */
 
 /* -----------------------------
-   BUTTONS & LINKS
------------------------------- */
-a.donate-button, button {
-    display: inline-block;
-    background: #243B53;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
 
-a.donate-button:hover, button:hover {
-    background: #4169e1;
-}
 
 /* -----------------------------
    FOOTER
@@ -976,3 +960,39 @@ form button:hover {
 }
 
 
+
+/* Contact page responsive layout */
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-info-card,
+    .message-card {
+        width: 100%;
+        padding: 22px;
+        box-sizing: border-box;
+    }
+}
+
+/* Smaller mobile screens */
+@media (max-width: 480px) {
+    .contact-layout {
+        gap: 15px;
+    }
+
+    .contact-info-card,
+    .message-card {
+        padding: 18px;
+    }
+
+    .contact-info-card h2,
+    .message-card h2 {
+        font-size: 20px;
+    }
+
+    .contact-info-grid p {
+        overflow-wrap: anywhere;
+    }
+}
