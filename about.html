@@ -59,21 +59,32 @@
                 max-width: 800px;
                 text-align: center;
             }
+            /* Team members horizontal layout */
+            .our-team .team-members {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 30px;
+                width: 100%;
+                margin-top: 20px;
+            }
 
-            /* Team member section */
+            /* Individual team member */
             .our-team .team-member {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
                 text-align: center;
-                width: 100%;
+                flex: 1;
+                min-width: 0;
             }
 
-            /* Team member image */
+            /* Team member images */
             .our-team .team-member img {
-                width: 420px;
-                height: 260px;
+                width: 100%;
+                max-width: 260px;
+                height: 220px;
                 object-fit: contain;
                 object-position: center;
                 display: block;
@@ -81,21 +92,38 @@
                 border-radius: 10px;
             }
 
-            /* Team member name */
+            /* Team member names */
             .our-team .team-member h3 {
                 margin: 5px 0 8px;
                 color: white;
                 text-align: center;
             }
 
-            /* Job title */
+            /* Team member job titles */
             .our-team .team-member p {
                 margin: 0;
                 color: white;
                 text-align: center;
             }
+            /* Stack team members on small screens */
+            @media (max-width: 600px) {
+                .our-team .team-members {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 25px;
+                }
 
-            /* Become a Donor Section */
+                .our-team .team-member {
+                    width: 100%;
+                    flex: none;
+                }
+
+                .our-team .team-member img {
+                    width: 100%;
+                    max-width: 300px;
+                    height: 220px;
+                }
+            }
 
             /* Become a Donor Section */
             .donate-section {
@@ -347,15 +375,23 @@
                     every learner to thrive.
                 </p>
 
-                <div class="team-member">
 
-                    <img src="murudu.png" alt="Murudu MS - Managing Director">
+                <div class="team-members">
 
-                    <h3>Murudu MS</h3>
+                    <div class="team-member">
+                        <img src="murudu.png" alt="Murudu MS">
+                        <h3>Murudu MS</h3>
+                        <p>Managing Director</p>
+                    </div>
 
-                    <p>Managing Director</p>
+                    <div class="team-member">
+                        <img src="matlabo.jpeg" alt="Team Member 2">
+                        <h3>Mr Vincent</h3>
+                        <p>Office Administrator</p>
+                    </div>
 
                 </div>
+
 
             </div>
 
@@ -371,20 +407,20 @@
 
         </main>
         <!--  FOOTER -->
-         <footer>
-        <div class="affiliates">
-            <div class="affiliate">
-                <img src="gov-logo.png" alt="SA Gov logo">
+        <footer>
+            <div class="affiliates">
+                <div class="affiliate">
+                    <img src="gov-logo.png" alt="SA Gov logo">
+                </div>
+                <div class="affiliate">
+                    <img src="saasta-logo.jfif" alt="SAASTA Logo">
+                </div>
+                <div class="affiliate">
+                    <img src="nationalScienceMonth.jpg" alt="National Science Week Logo">
+                </div>
             </div>
-            <div class="affiliate">
-                <img src="saasta-logo.jfif" alt="SAASTA Logo">
-            </div>
-            <div class="affiliate">
-                <img src="nationalScienceMonth.jpg" alt="National Science Week Logo">
-            </div>
-        </div>
-        <p>&copy; 2025 Bokamoso Science and Technology Education Centre. All rights reserved.</p>
-    </footer>
+            <p>&copy; 2025 Bokamoso Science and Technology Education Centre. All rights reserved.</p>
+        </footer>
         <script src="script.js"></script>
     </body>
 
