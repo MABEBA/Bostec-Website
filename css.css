@@ -7,11 +7,11 @@ html, body {
     font-family: 'Roboto', sans-serif;
     color: white;
     background-color: royalblue;
-    display: flex;
+  display: flex;
     flex-direction: column;
-    min-height: 100vh;
+   /* min-height: 100vh;*/
     list-style-type: none;
-    overflow: visible;
+    overflow: hidden;
 }
 
 ul,
@@ -959,33 +959,40 @@ form button:hover {
     transform: translateY(-2px);
 }
 
-/* Force contact cards to stack on mobile phones */
-@media screen and (max-width: 800px) {
-    main .contact-layout {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 20px !important;
-        width: 100% !important;
+
+
+/* Contact page responsive layout */
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    main .contact-layout .contact-info-card,
-    main .contact-layout .message-card {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        margin: 0 !important;
-        box-sizing: border-box !important;
-        flex: 0 0 auto !important;
+    .contact-info-card,
+    .message-card {
+        width: 100%;
+        padding: 22px;
+        box-sizing: border-box;
+    }
+}
+
+/* Smaller mobile screens */
+@media (max-width: 480px) {
+    .contact-layout {
+        gap: 15px;
     }
 
-    main .contact-layout form {
-        width: 100% !important;
+    .contact-info-card,
+    .message-card {
+        padding: 18px;
     }
 
-    main .contact-layout input,
-    main .contact-layout textarea {
-        max-width: 100% !important;
+    .contact-info-card h2,
+    .message-card h2 {
+        font-size: 20px;
+    }
+
+    .contact-info-grid p {
+        overflow-wrap: anywhere;
     }
 }
